@@ -2,9 +2,9 @@
 
 kotlin = "1.9.23"
 compose = "1.6.1"
-agp = "8.2.2"
-androidx-activityCompose = "1.8.2"
-androidx-uiTest = "1.6.5"
+agp = "8.4.1"
+androidx-activityCompose = "1.9.0"
+androidx-uiTest = "1.6.7"
 voyagerVersion = "1.0.0"
 
 [libraries]
