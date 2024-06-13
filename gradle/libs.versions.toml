@@ -2,10 +2,12 @@
 
 kotlin = "1.9.23"
 compose = "1.6.1"
-agp = "8.4.1"
+agp = "8.4.2"
 androidx-activityCompose = "1.9.0"
-androidx-uiTest = "1.6.7"
+androidx-uiTest = "1.6.8"
 voyagerVersion = "1.0.0"
+googleGmsGoogleServices = "4.4.2"
+firebaseDatabase = "21.0.0"
 
 [libraries]
 
@@ -16,9 +18,11 @@ qr-code = { module = "network.chaintech:qr-kit", version = "1.0.3" }
 voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyagerVersion" }
 voyager-transitions = { module = "cafe.adriel.voyager:voyager-transitions", version.ref = "voyagerVersion" }
 voyager-screenmodel = { module = "cafe.adriel.voyager:voyager-screenmodel", version.ref = "voyagerVersion" }
+firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 
 [plugins]
 
 multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 compose = { id = "org.jetbrains.compose", version.ref = "compose" }
 android-application = { id = "com.android.application", version.ref = "agp" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "715770166359",
+    "firebase_url": "https://ggg2024-bfc8a-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "ggg2024-bfc8a",
+    "storage_bucket": "ggg2024-bfc8a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715770166359:android:e84fa5701f616f08a1b712",
+        "android_client_info": {
+          "package_name": "chaintech.qr.kit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgSUbkWmPERX1M7iEqdKsSUYsp5F28wnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

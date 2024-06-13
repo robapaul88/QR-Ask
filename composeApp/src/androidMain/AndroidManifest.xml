@@ -9,7 +9,7 @@
     <application
         android:name=".AndroidApp"
         android:icon="@android:drawable/ic_menu_compass"
-        android:label="QrKit"
+        android:label="QR-Ask"
         android:theme="@android:style/Theme.Material.NoActionBar">
         <activity
             android:name=".AppActivity"

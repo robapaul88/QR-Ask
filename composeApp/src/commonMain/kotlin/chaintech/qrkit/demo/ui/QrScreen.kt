@@ -37,8 +37,8 @@ import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
-import qrkitcomposemultiplatform.composeapp.generated.resources.Res
-import qrkitcomposemultiplatform.composeapp.generated.resources.img
+import qr_ask.composeapp.generated.resources.Res
+import qr_ask.composeapp.generated.resources.img
 
 class QrScreen : Screen {
 

@@ -1,4 +1,4 @@
-rootProject.name = "QRKitComposeMultiplatform"
+rootProject.name = "QR-Ask"
 include(":composeApp")
 
 pluginManagement {

@@ -43,8 +43,8 @@ import androidx.compose.ui.unit.sp
 import chaintech.qrkit.demo.LocalSnackBarHostState
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.painterResource
-import qrkitcomposemultiplatform.composeapp.generated.resources.Res
-import qrkitcomposemultiplatform.composeapp.generated.resources.ic_gallery_icon
+import qr_ask.composeapp.generated.resources.Res
+import qr_ask.composeapp.generated.resources.ic_gallery_icon
 import qrscanner.QrScanner
 
 @Composable
