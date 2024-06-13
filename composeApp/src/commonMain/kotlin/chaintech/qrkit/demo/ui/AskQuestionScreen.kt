@@ -21,6 +21,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -53,59 +54,78 @@ fun AskQuestionScreen() {
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Text(
-                        text = "Your Room: ",
-                        color = Color.White,
-                        fontSize = 22.sp,
-                    )
-                    Spacer(modifier = Modifier.width(5.dp))
-                    BasicTextField(
-                        value = roomNameState.value,
-                        onValueChange = { newRoomName -> roomNameState.value = newRoomName },
-                        textStyle = TextStyle(color = Color.White),
-                        modifier = Modifier
-                            .background(Color(0xFF333333), shape = MaterialTheme.shapes.small)
-                            .padding(8.dp)
-                    )
-                }
+                RoomNameField(roomNameState)
                 Spacer(modifier = Modifier.height(20.dp))
-                Box(
-                    modifier = Modifier
-                        .background(Color(0xFF333333), shape = MaterialTheme.shapes.small)
-                        .padding(start = 10.dp, end = 10.dp, top = 16.dp, bottom = 16.dp)
-                        .fillMaxWidth()
-                ) {
-                    if (questionState.value.isEmpty()) {
-                        Text(
-                            text = "Enter your question here...",
-                            color = Color.Gray
-                        )
-                    }
-                    BasicTextField(
-                        value = questionState.value,
-                        onValueChange = { newQuestion -> questionState.value = newQuestion },
-                        textStyle = TextStyle(color = Color.White),
-                        modifier = Modifier
-                            .padding(start = 16.dp, end = 16.dp)
-                            .clip(RoundedCornerShape(12.dp))
-                    )
-                }
+                QuestionField(questionState)
             }
             Spacer(modifier = Modifier.height(16.dp))
-            TextButton(
-                onClick = { /* Action when we press submit */ },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .background(Color(0xFF1A73E8), shape = MaterialTheme.shapes.small)
-                    .clip(RoundedCornerShape(12.dp))
-            ) {
-                Text(text = "Submit", color = Color.White)
-            }
+            BasicButton()
         }
+    }
+}
+
+@Composable
+fun RoomNameField(
+    roomNameState: MutableState<String>
+){
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Text(
+            text = "Your Room: ",
+            color = Color.White,
+            fontSize = 22.sp,
+        )
+        Spacer(modifier = Modifier.width(5.dp))
+        BasicTextField(
+            value = roomNameState.value,
+            onValueChange = { newRoomName -> roomNameState.value = newRoomName },
+            textStyle = TextStyle(color = Color.White),
+            modifier = Modifier
+                .background(Color(0xFF333333), shape = MaterialTheme.shapes.small)
+                .padding(8.dp)
+        )
+    }
+}
+
+@Composable
+fun QuestionField(
+    questionState: MutableState<String>
+){
+    Box(
+        modifier = Modifier
+            .background(Color(0xFF333333), shape = MaterialTheme.shapes.small)
+            .padding(start = 10.dp, end = 10.dp, top = 16.dp, bottom = 16.dp)
+            .fillMaxWidth()
+    ) {
+        if (questionState.value.isEmpty()) {
+            Text(
+                text = "Enter your question here...",
+                color = Color.Gray
+            )
+        }
+        BasicTextField(
+            value = questionState.value,
+            onValueChange = { newQuestion -> questionState.value = newQuestion },
+            textStyle = TextStyle(color = Color.White),
+            modifier = Modifier
+                .padding(start = 16.dp, end = 16.dp)
+                .clip(RoundedCornerShape(12.dp))
+        )
+    }
+}
+
+@Composable
+fun BasicButton(){
+    TextButton(
+        onClick = { /* Action when we press submit */ },
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(Color(0xFF1A73E8), shape = MaterialTheme.shapes.small)
+            .clip(RoundedCornerShape(12.dp))
+    ) {
+        Text(text = "Submit", color = Color.White)
     }
 }
 
