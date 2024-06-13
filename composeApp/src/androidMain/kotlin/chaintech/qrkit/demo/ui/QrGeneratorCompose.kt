@@ -57,7 +57,7 @@ import qrgenerator.QRCodeImage
 import qrgenerator.generateQrCode
 
 @Composable
-fun QrGeneratorCompose(paddingValues: PaddingValues) {
+actual fun QrGeneratorCompose(paddingValues: PaddingValues) {
     val scope = rememberCoroutineScope()
     var inputText by rememberSaveable { mutableStateOf("") }
     var isInputTextError by rememberSaveable { mutableStateOf(false) }

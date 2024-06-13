@@ -48,7 +48,7 @@ import qr_ask.composeapp.generated.resources.ic_gallery_icon
 import qrscanner.QrScanner
 
 @Composable
-fun QrScannerCompose() {
+actual fun QrScannerCompose() {
     var qrCodeURL by remember { mutableStateOf("") }
     var startBarCodeScan by remember { mutableStateOf(false) }
     var flashlightOn by remember { mutableStateOf(false) }
