@@ -120,4 +120,5 @@ fun generateQrCode(
 * CameraX Jetpack library
 * ML Kit
 
+
 - for more follow this class -> [App.kt](https://github.com/ChainTechNetwork/QRKitComposeMultiplatform/blob/main/composeApp/src/commonMain/kotlin/chaintech/qrkit/demo/App.kt)
